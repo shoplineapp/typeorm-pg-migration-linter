@@ -94,8 +94,10 @@ func checkAllLint(paths string) error {
 			fmt.Println()
 		}
 
-		return cli.Exit("lint not pass", -1)
+		return cli.Exit("Lint not pass ⛔", -1)
 	}
+
+	fmt.Println("Found 0 issues 🎉")
 
 	return nil
 }
