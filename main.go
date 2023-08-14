@@ -144,7 +144,7 @@ func bulkFindQuery(contents []string) (allSql []string) {
 }
 
 func runLint(sql string) LintResult {
-	cmdString := fmt.Sprintf(`echo "%s" | squawk --exclude=ban-drop-column`, sql)
+	cmdString := fmt.Sprintf(`echo "%s" | squawk`, sql)
 
 	cmd := exec.Command("sh", "-c", cmdString)
 	resultBytes, err := cmd.Output()
