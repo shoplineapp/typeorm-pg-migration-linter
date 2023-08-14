@@ -85,9 +85,13 @@ func checkAllLint(paths string) error {
 
 	if len(fail) > 0 {
 		fmt.Println("fail sql:")
+		fmt.Println()
+		fmt.Println("=====================================")
 		for _, result := range fail {
 			fmt.Println(result.SQL)
 			fmt.Println(result.Lint)
+			fmt.Println("=====================================")
+			fmt.Println()
 		}
 
 		return cli.Exit("lint not pass", -1)
